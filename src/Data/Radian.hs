@@ -10,7 +10,7 @@ module Data.Radian(
 import Control.Lens(Iso, iso, from)
 import Data.Eq(Eq)
 import Data.Ord(Ord)
-import Prelude(Show, Num((*)), Fractional((/)), Floating, pi)
+import Prelude(Show, Num((*)), Fractional((/)), Floating, Real, RealFrac, RealFloat, pi)
 
 -- $setup
 -- >>> import Control.Lens((#))
@@ -18,7 +18,7 @@ import Prelude(Show, Num((*)), Fractional((/)), Floating, pi)
 
 newtype Radian a =
   Radian a
-  deriving (Eq, Ord, Show, Num, Fractional)
+  deriving (Eq, Ord, Show, Num, Fractional, Floating, Real, RealFrac, RealFloat)
 
 -- | An isomorphism from radians to degrees.
 --
