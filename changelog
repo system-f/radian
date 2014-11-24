@@ -1,3 +1,11 @@
+0.0.4
+
+* Delete the `Radians` data type -- just use raw floating-point types.
+
+0.0.3
+
+* Change the `degrees` iso.
+
 0.0.2
 
 * More instances for `Radian`.
