@@ -1,12 +1,13 @@
 {-# LANGUAGE NoImplicitPrelude #-}
-{-# LANGUAGE GeneralizedNewtypeDeriving #-}
+{-# LANGUAGE RankNTypes #-}
 
 module Data.Radian(
   toRadians
 , fromRadians
 ) where
 
-import Control.Lens(Iso, iso, from)
+import Data.Functor(Functor(fmap))
+import Data.Profunctor(Profunctor(dimap))
 import Prelude(Num((*)), Fractional((/)), Floating, pi)
 
 -- $setup
@@ -39,9 +40,9 @@ toRadians ::
   (Floating a, Floating b) =>
   Iso a b a b
 toRadians =
-  iso
-    (\a -> a / pi * 180)
-    (\a -> a / 180 * pi)   
+  dimap
+    to
+    (fmap fr)
 
 -- | An isomorphism between degrees and radians.
 --
@@ -60,4 +61,27 @@ fromRadians ::
   (Floating a, Floating b) =>
   Iso a b a b
 fromRadians =
-  from toRadians
+  dimap
+    fr
+    (fmap to)
+
+----
+
+to ::
+  Floating a =>
+  a
+  -> a
+to a =
+  a / pi * 180
+
+fr ::
+  Floating a =>
+  a
+  -> a
+fr a =
+  a / 180 * pi
+
+type Iso s t a b =
+  forall p f.
+  (Profunctor p, Functor f) =>
+  p a (f b) -> p s (f t)

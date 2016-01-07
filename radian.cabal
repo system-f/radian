@@ -1,5 +1,5 @@
 name:               radian
-version:            0.0.5
+version:            0.0.6
 license:            BSD3
 license-file:       LICENCE
 author:             Tony Morris <ʇǝu˙sıɹɹoɯʇ@ןןǝʞsɐɥ>
@@ -30,7 +30,7 @@ library
 
   build-depends:
                       base < 5 && >= 3
-                    , lens >= 4.0
+                    , profunctors >= 3.1.1
 
   ghc-options:
                     -Wall
@@ -61,6 +61,7 @@ test-suite doctests
                     , directory >= 1.1
                     , QuickCheck >= 2.0
                     , template-haskell >= 2.8
+                    , lens >= 4.0
 
   ghc-options:
                     -Wall
