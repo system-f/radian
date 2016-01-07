@@ -1,16 +1,16 @@
 name:               radian
-version:            0.0.4
+version:            0.0.5
 license:            BSD3
 license-file:       LICENCE
 author:             Tony Morris <ʇǝu˙sıɹɹoɯʇ@ןןǝʞsɐɥ>
 maintainer:         Tony Morris
 copyright:          Copyright (C) 2014 NICTA Limited
-synopsis:           A floating-point wrapper for measurements that use radians.
+synopsis:           Isomorphisms for measurements that use radians.
 category:           Development
 description:       
   <<http://i.imgur.com/Ns5hntl.jpg>>
   .
-  A floating-point wrapper for measurements that use radians.
+  Isomorphisms for measurements that use radians.
 homepage:           https://github.com/NICTA/radian
 bug-reports:        https://github.com/NICTA/radian/issues
 cabal-version:      >= 1.10

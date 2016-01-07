@@ -18,7 +18,7 @@ import Prelude(Num((*)), Fractional((/)), Floating, pi)
 -- >>> toRadians # (180 :: Double)
 -- 3.141592653589793
 --
--- >> toRadians # (90 :: Double)
+-- >>> toRadians # (90 :: Double)
 -- 1.5707963267948966
 --
 -- >>> toRadians # (359 :: Double)
