@@ -5,6 +5,7 @@ license-file:       LICENCE
 author:             Tony Morris <ʇǝu˙sıɹɹoɯʇ@ןןǝʞsɐɥ>
 maintainer:         Tony Morris
 copyright:          Copyright (C) 2014 NICTA Limited
+                    Copyright (C) 2018 Commonwealth Scientific and Industrial Research Organisation (CSIRO) ABN 41 687 119 230.
 synopsis:           Isomorphisms for measurements that use radians.
 category:           Development
 description:       
