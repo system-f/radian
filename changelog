@@ -1,3 +1,7 @@
+0.1
+
+* Replace doctest with HUnit
+
 0.0.6
 
 * Remove dependency on lens.
