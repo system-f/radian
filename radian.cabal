@@ -12,23 +12,23 @@ description:
   <<http://i.imgur.com/Ns5hntl.jpg>>
   .
   Isomorphisms for measurements that use radians.
-homepage:           https://github.com/NICTA/radian
-bug-reports:        https://github.com/NICTA/radian/issues
+homepage:           https://github.com/qfpl/radian
+bug-reports:        https://github.com/qfpl/radian/issues
 cabal-version:      >= 1.10
-build-type:         Custom
+build-type:         Simple
 extra-source-files: changelog
 
 source-repository   head
   type:             git
-  location:         git@github.com:NICTA/radian.git
+  location:         git@github.com:qfpl/radian.git
 
 library
   default-language:
                     Haskell2010
 
   build-depends:
-                      base < 5 && >= 3
-                    , profunctors >= 3.1.1
+                      base >= 3 && < 5
+                    , profunctors >= 3.1.1 && < 5.3
 
   ghc-options:
                     -Wall
@@ -42,24 +42,21 @@ library
   exposed-modules:
                     Data.Radian
 
-test-suite doctests
+test-suite hunit
   type:
                     exitcode-stdio-1.0
 
   main-is:
-                    doctests.hs
+                    hunit_tests.hs
 
   default-language:
                     Haskell2010
 
   build-depends:
-                      base < 5 && >= 3
-                    , doctest >= 0.9.7
-                    , filepath >= 1.3
-                    , directory >= 1.1
-                    , QuickCheck >= 2.0
-                    , template-haskell >= 2.8
-                    , lens >= 4.0
+                      base >= 3 && < 5
+                    , lens >= 4 && < 4.17
+                    , HUnit >= 1.2 && < 1.7
+                    , radian
 
   ghc-options:
                     -Wall

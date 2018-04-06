@@ -1,6 +1,16 @@
 {-# LANGUAGE NoImplicitPrelude #-}
 {-# LANGUAGE RankNTypes #-}
 
+{-|
+Module      : Data.Radian
+Copyright   : (C) CSIRO 2018
+License     : BSD3
+Maintainer  : Tony Morris <ʇǝu˙sıɹɹoɯʇ@ןןǝʞsɐɥ>
+Stability   : experimental
+Portability : portable
+
+Isomorphisms between degrees and radians.
+-}
 module Data.Radian(
   toRadians
 , fromRadians
@@ -10,32 +20,7 @@ import Data.Functor(Functor(fmap))
 import Data.Profunctor(Profunctor(dimap))
 import Prelude(Num((*)), Fractional((/)), Floating, pi)
 
--- $setup
--- >>> import Control.Lens((#))
--- >>> import Prelude(Double)
-
 -- | An isomorphism between radians and degrees.
---
--- >>> toRadians # (180 :: Double)
--- 3.141592653589793
---
--- >>> toRadians # (90 :: Double)
--- 1.5707963267948966
---
--- >>> toRadians # (359 :: Double)
--- 6.265732014659643
---
--- >>> toRadians # (360 :: Double)
--- 6.283185307179586
---
--- >>> toRadians # (3600 :: Double)
--- 62.83185307179586
---
--- >>> toRadians # (1 :: Double)
--- 1.7453292519943295e-2
---
--- >>> toRadians # ((-180) :: Double)
--- -3.141592653589793
 toRadians ::
   (Floating a, Floating b) =>
   Iso a b a b
@@ -45,18 +30,6 @@ toRadians =
     (fmap fr)
 
 -- | An isomorphism between degrees and radians.
---
--- >>> fromRadians # (0 :: Double)
--- 0.0
---
--- >>> fromRadians # (1 :: Double)
--- 57.29577951308232
---
--- >>> fromRadians # ((-1) :: Double)
--- -57.29577951308232
---
--- >>> fromRadians # (3 :: Double)
--- 171.88733853924697
 fromRadians ::
   (Floating a, Floating b) =>
   Iso a b a b
