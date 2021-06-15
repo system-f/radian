@@ -1,19 +1,20 @@
 name:               radian
-version:            0.1
+version:            0.2
 license:            BSD3
 license-file:       LICENCE
 author:             Tony Morris <ʇǝu˙sıɹɹoɯʇ@ןןǝʞsɐɥ>
 maintainer:         Tony Morris
 copyright:          Copyright (C) 2014 NICTA Limited
                     Copyright (C) 2018 Commonwealth Scientific and Industrial Research Organisation (CSIRO) ABN 41 687 119 230.
+                    Copyright (C) 2020-2021 Tony Morris
 synopsis:           Isomorphisms for measurements that use radians.
 category:           Development
-description:       
-  <<https://raw.githubusercontent.com/qfpl/assets/master/data61-transparent-bg.png>>
+description:
+  <<https://system-f.gitlab.io/logo/systemf-450x450.jpg>>
   .
   Isomorphisms for measurements that use radians.
-homepage:           https://github.com/qfpl/radian
-bug-reports:        https://github.com/qfpl/radian/issues
+homepage:           https://github.com/system-f/radian
+bug-reports:        https://github.com/system-f/radian/issues
 cabal-version:      >= 1.10
 build-type:         Simple
 extra-source-files: changelog
@@ -21,7 +22,7 @@ tested-with:        GHC == 8.6.3, GHC == 8.4.4, GHC == 8.2.2, GHC == 8.0.2, GHC 
 
 source-repository   head
   type:             git
-  location:         git@github.com:qfpl/radian.git
+  location:         git@github.com:system-f/radian.git
 
 library
   default-language:
@@ -29,7 +30,7 @@ library
 
   build-depends:
                       base >= 3 && < 5
-                    , profunctors >= 3.1.1 && < 5.4
+                    , profunctors >= 3 && < 6
 
   ghc-options:
                     -Wall

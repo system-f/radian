@@ -4,6 +4,7 @@
 {-|
 Module      : Data.Radian
 Copyright   : (C) CSIRO 2018
+Copyright   : (C) Tony Morris 2020-2021
 License     : BSD3
 Maintainer  : Tony Morris <ʇǝu˙sıɹɹoɯʇ@ןןǝʞsɐɥ>
 Stability   : experimental
